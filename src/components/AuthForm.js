@@ -65,13 +65,13 @@ function AuthForm() {
     e.preventDefault();
     try {
       if (isLogin) {
-        const response = await axios.post('http://127.0.0.1:5000/login', { email: username, password });
+        const response = await axios.post('https://stimuler-python.onrender.com/login', { email: username, password });
         localStorage.setItem('accessToken', response.data.access_token);
         navigate('/dashboard');
       } else {
-        await axios.post('http://127.0.0.1:5000/register', { username, email, password });
+        await axios.post('https://stimuler-python.onrender.com/register', { username, email, password });
         // Automatically log in after successful registration
-        const loginResponse = await axios.post('http://127.0.0.1:5000/login', { email, password });
+        const loginResponse = await axios.post('https://stimuler-python.onrender.com/login', { email, password });
         localStorage.setItem('accessToken', loginResponse.data.access_token);
         navigate('/dashboard');
       }

@@ -11,7 +11,7 @@ function LoginForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://127.0.0.1:5000/login', { email, password });
+      const response = await axios.post('https://stimuler-python.onrender.com/login', { email, password });
       localStorage.setItem('accessToken', response.data.access_token);
       navigate('/dashboard');
     } catch (error) {

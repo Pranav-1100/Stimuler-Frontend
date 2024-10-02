@@ -87,7 +87,7 @@ function Dashboard() {
 
   const fetchTopErrors = async () => {
     try {
-      const response = await axios.get('http://127.0.0.1:5000/top-errors?n=10', {
+      const response = await axios.get('https://stimuler-python.onrender.com/top-errors?n=10', {
         headers: { Authorization: `Bearer ${localStorage.getItem('accessToken')}` }
       });
       setTopErrors(response.data.errors || []);
@@ -108,7 +108,7 @@ function Dashboard() {
 
   const generateDummyData = async () => {
     try {
-      await axios.post('http://127.0.0.1:5000/generate-dummy-data', {}, {
+      await axios.post('https://stimuler-python.onrender.com/generate-dummy-data', {}, {
         headers: { Authorization: `Bearer ${localStorage.getItem('accessToken')}` }
       });
       showSnackbar('Dummy data generated successfully');

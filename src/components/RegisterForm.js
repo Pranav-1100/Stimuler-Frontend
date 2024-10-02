@@ -12,7 +12,7 @@ function RegisterForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://127.0.0.1:5000/register', { username, email, password });
+      const response = await axios.post('https://stimuler-python.onrender.com/register', { username, email, password });
       localStorage.setItem('accessToken', response.data.access_token); // Assuming the token is returned on registration
       navigate('/dashboard');
     } catch (error) {

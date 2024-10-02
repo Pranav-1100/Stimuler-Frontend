@@ -9,7 +9,7 @@ function ErrorForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://127.0.0.1:5000/update-error', 
+      await axios.post('https://stimuler-python.onrender.com/update-error', 
         { error_category: errorCategory, error_subcategory: errorSubcategory },
         { headers: { Authorization: `Bearer ${localStorage.getItem('accessToken')}` } }
       );
