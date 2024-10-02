@@ -249,7 +249,7 @@ function Dashboard() {
                 </CardActions>
               </StyledCard>
             </Grid>
-            <Grid item xs={12}>
+            {/* <Grid item xs={12}>
               <StyledCard>
                 <CardContent>
                   <Typography variant="h5" component="div" gutterBottom>
@@ -258,7 +258,7 @@ function Dashboard() {
                   <ErrorChart errors={topErrors} />
                 </CardContent>
               </StyledCard>
-            </Grid>
+            </Grid> */}
           </Grid>
         </StyledContainer>
       </Main>
